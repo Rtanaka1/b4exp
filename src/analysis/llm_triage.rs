@@ -48,16 +48,34 @@ pub fn evaluate_bug(
         "stream": false
     });
 
-    let resp = match ureq::post("http://localhost:11434/api/generate")
-        .send_json(body) {
-            Ok(r) => r,
-            Err(e) => {
-                println!("[LLM Triage] Failed to connect to LLM: {}", e);
-                return true; // Fallback to True Bug if LLM is unavailable
-            }
-        };
+    let body_str = body.to_string();
 
-    let result: serde_json::Value = match resp.into_json() {
+    let output = std::process::Command::new("curl")
+        .arg("-s")
+        .arg("-X")
+        .arg("POST")
+        .arg("http://localhost:11434/api/generate")
+        .arg("-H")
+        .arg("Content-Type: application/json")
+        .arg("-d")
+        .arg(&body_str)
+        .output();
+
+    let resp_str = match output {
+        Ok(out) if out.status.success() => {
+            String::from_utf8_lossy(&out.stdout).into_owned()
+        }
+        Ok(out) => {
+            println!("[LLM Triage] curl returned error status: {}", out.status);
+            return true;
+        }
+        Err(e) => {
+            println!("[LLM Triage] Failed to execute curl: {}", e);
+            return true; // Fallback to True Bug if LLM is unavailable
+        }
+    };
+
+    let result: serde_json::Value = match serde_json::from_str(&resp_str) {
         Ok(v) => v,
         Err(_) => return true,
     };
