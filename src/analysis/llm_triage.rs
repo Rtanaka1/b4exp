@@ -41,7 +41,7 @@ pub fn evaluate_bug(
         【コードの文脈】\n\
         {}\n\
         \n\
-        ステップ・バイ・ステップで推論し、最終的な結論として、脆弱性の疑いが残る場合は「True Bug」、確実に安全だと言い切れる場合のみ「False Positive」という文字列を含めて回答してください。",
+        推論は簡潔に3行以内でまとめ、最終的な結論として、脆弱性の疑いが残る場合は「True Bug」、確実に安全だと言い切れる場合のみ「False Positive」という文字列を必ず含めて回答してください。",
         bug_type, code_context
     );
 
@@ -51,7 +51,10 @@ pub fn evaluate_bug(
     let body = json!({
         "model": "qwen2.5-coder:7b",
         "prompt": prompt,
-        "stream": false
+        "stream": false,
+        "options": {
+            "num_predict": 300
+        }
     });
 
     let body_str = body.to_string();
