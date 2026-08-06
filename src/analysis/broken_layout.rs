@@ -435,6 +435,7 @@ mod inner {
                                                             let id = place.local.index();
 
                                                             // if A's align < B's align, taint as source
+                                                            match align_status {
                                                                 Comparison::Less | Comparison::NoideaL => {
                                                                     // progress_info!("warn::align");
                                                                     let id2 = lplace.local.index();
