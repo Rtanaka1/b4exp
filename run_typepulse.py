@@ -1,10 +1,10 @@
 import os, subprocess
 
 def run_typepulse(directory):
-    print(f"processing: {processing}")
+    print(f"processing: {directory}")
     os.chdir(directory)
     # subprocess.call("rustup override set nightly-2023-06-02-x86_64-unknown-linux-gnu", shell=True)
-    subprocess.call("cargo typepulse -j 16", shell=True)
+    subprocess.call("cargo typepulse -j 16 > report.txt 2>&1", shell=True)
     print(f"Completed `cargo typepulse` in {directory}")
 
 if __name__ == "__main__":
