@@ -1,8 +1,0 @@
-[performance]
-features = "radix format"
-
-[compact]
-features = "radix format compact"
-
-[report]
-out = ["Html", "Xml"]
