@@ -82,7 +82,7 @@ impl<'tcx> BrokenLayoutChecker<'tcx> {
                 let behavior_flag = status.behavior_flag();
                 if !behavior_flag.is_empty()
                 {
-                    if !crate::analysis::llm_triage::evaluate_bug(tcx, "Broken Layout Bug", body_did, None) {
+                    if !crate::analysis::llm_triage::evaluate_bug(tcx, "Broken Layout Bug", hir_map.body_owner_def_id(body_id).to_def_id(), None) {
                         continue;
                     }
                     // progress_info!("find the bug with behavior_flag: {:?}", behavior_flag);

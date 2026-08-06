@@ -461,8 +461,7 @@ mod inner {
                                                                         _ => {},
                                                                     }
                                                                 }
-                                                            } else if is_from_adt && is_to_adt && !fty.is_c_void(tcx) &&
-                                                                    {
+                                                            } else if is_from_adt && is_to_adt && !fty.is_c_void(tcx) {
                                                                 // if one of the adt doesn't have stable layout, then it is dangerous
                                                                 // if ((!is_from_c && !is_to_c) && (!is_from_trans && !is_to_trans)) && (fty.to_string() != tty.to_string()) {
                                                                 // progress_info!("(adt>adt) is_from_c:{:?}, is_from_trans:{:?}", is_from_c, is_from_trans);
@@ -656,8 +655,7 @@ mod inner {
                                                                         _ => {},
                                                                     }
                                                                 }
-                                                            } else if is_from_adt && is_to_adt && !fty.is_c_void(tcx) &&
-                                                                    {
+                                                            } else if is_from_adt && is_to_adt && !fty.is_c_void(tcx) {
                                                                 // if one of the adt doesn't have stable layout, then it is dangerous
                                                                 let from_ty_name = fty.to_string();
                                                                 // if ((!is_from_c && !is_to_c) && (!is_from_trans && !is_to_trans)) && (from_ty_name != tty.to_string()) && (!from_ty_name.contains("MaybeUninit")) {
