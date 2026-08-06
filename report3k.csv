@@ -1,0 +1,85 @@
+Package,Function,Bug,disable-inter,Inter-procedural,Clippy,Link
+candle-core-0.4.1,quantized::ggml_file::from_raw_data,bug1,TP,TP,x,https://github.com/huggingface/candle/issues/2040
+candle-core-0.4.1,safetensors::convert_slice,bug1,TP,TP,x,https://github.com/huggingface/candle/issues/2040
+candle-core-0.4.1,safetensors::convert_slice_with_cast,bug1,TP,TP,x,https://github.com/huggingface/candle/issues/2040
+py-spy-0.3.14,python_data_access::copy_string,bug1,TP,TP,x,https://github.com/benfred/py-spy/issues/616
+py-spy-0.3.14,python_data_access::copy_string,bug3,FP,FP,-,
+tantivy-bitpacker-0.5.0,filter_vec::avx2::filter_vec_in_place,bug1,FP,x,-,
+fyrox-core-0.27.0,<visitor::BinaryBlob<‘a  T> as visitor::Visit>::visit,bug1,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/710
+fyrox-core-0.27.0,array_as_u8_slice,bug2,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/630
+fyrox-core-0.27.0,value_as_u8_slice,bug2,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/630
+fyrox-core-0.27.0,transmute_vec_as_bytes,bug2,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/630
+fyrox-core-0.27.0,<visitor::BinaryBlob<‘a  T> as visitor::Visit>::visit,bug2,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/710
+fyrox-core-0.27.0,transmute_vec_as_bytes,bug3,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/630
+fyrox-core-0.27.0,"<visitor::BinaryBlob<'a, T> as visitor::Visit>::visit",bug3,TP,TP,x,https://github.com/FyroxEngine/Fyrox/issues/710
+gfx-backend-gl-0.9.0,queue::Queue::get,bug1,TP,TP,x,https://github.com/gfx-rs/gfx/issues/3795
+nalgebra-0.32.4,"linalg::svd::SVD::<T,  R,  C>::try_new_unordered",bug2,FP,x,-,
+webrender-0.61.0,platform::unix::font::flip_bitmap_x,bug1,TP,TP,v,https://github.com/servo/webrender/issues/4850
+webrender-0.61.0,platform::unix::font::flip_bitmap_y,bug1,TP,TP,v,https://github.com/servo/webrender/issues/4850
+webrender-0.61.0,<util::PrimaryArc<T> as malloc_size_of::MallocShallowSizeOf>::shallow_size_of,bug2,FP,FP,-,
+silicon-0.5.2,blur::gaussian_blur,bug2,TP,TP,x,https://github.com/Aloxaf/silicon/issues/256
+spl-token-swap-3.0.0,instruction::unpack,bug1,TP,TP,x,https://github.com/solana-labs/solana-program-library/issues/5243
+spl-token-swap-3.0.0,instruction::unpack,bug3,TP,TP,x,https://github.com/solana-labs/solana-program-library/issues/5243
+arrow-buffer-50.0.0,builder::BufferBuilder::<T>::as_slice,bug1,FP,x,-,
+arrow-buffer-50.0.0,builder::BufferBuilder::<T>::as_slice_mut,bug1,FP,x,-,
+arrow-buffer-50.0.0,<buffer::immutable::Buffer as std::iter::FromIterator<T>>::from_iter,bug1,FP,x,-,
+arrow-buffer-50.0.0,<buffer::scalar::ScalarBuffer<T> as std::ops::Deref>::deref,bug1,FP,x,-,
+parquet-50.0.0,util::bit_util::BitReader::get_batch,bug1,FP,FP,-,
+capnp-0.19.2,Word::words_to_bytes_mut,bug3,FP,FP,-,
+scryer-prolog-0.9.4,machine::stack::Stack::index_and_frame_mut,bug1,FP,FP,-,
+scryer-prolog-0.9.4,machine::loader::<impl machine::Machine>::use_module,bug1,TP,TP,v,https://github.com/mthom/scryer-prolog/issues/2391
+scryer-prolog-0.9.4,machine::system_calls::<impl machine::Machine>::http_accept,bug1,TP,TP,x,https://github.com/mthom/scryer-prolog/issues/2392
+scryer-prolog-0.9.4,machine::system_calls::<impl machine::Machine>::http_answer,bug1,TP,TP,x,https://github.com/mthom/scryer-prolog/issues/2393
+scryer-prolog-0.9.4,machine::system_calls::<impl machine::Machine>::socket_server_accept,bug1,TP,TP,x,https://github.com/mthom/scryer-prolog/issues/2394
+scryer-prolog-0.9.4,machine::system_calls::<impl machine::Machine>::socket_server_close,bug1,TP,TP,x,https://github.com/mthom/scryer-prolog/issues/2395
+scryer-prolog-0.9.4,heap_print::HCPrinter::<‘a  Outputter>::handle_heap_term,bug1,TP,TP,v,https://github.com/mthom/scryer-prolog/issues/2396
+libafl-0.10.1,<observers::map::HitcountsMapObserver<M> as observers::Observer<S>>::post_exec,bug1,TP,TP,x,https://github.com/AFLplusplus/LibAFL/issues/1526
+libafl-0.10.1,bolts::staterestore::StateRestorer::<SP>::content_mut,bug1,TP,TP,x,https://github.com/AFLplusplus/LibAFL/issues/1526
+libafl-0.10.1,bolts::staterestore::StateRestorer::<SP>::content,bug1,TP,TP,x,https://github.com/AFLplusplus/LibAFL/issues/1526
+libafl-0.10.1,executors::inprocess::inprocess_get_state,bug3,TP,TP,x,
+libafl-0.10.1,executors::inprocess::inprocess_get_event_manager,bug3,TP,TP,x,
+libafl-0.10.1,executors::inprocess::inprocess_get_fuzzer,bug3,TP,TP,x,
+libafl-0.10.1,executors::inprocess::inprocess_get_executor,bug3,TP,TP,x,
+mesalink-1.1.0,libcrypto::bio::mesalink_BIO_new_mem_buf,bug2,TP,TP,x,https://github.com/mesalock-linux/mesalink/issues/55
+fontdue-0.8.0,platform::float::get_bitmap::get_bitmap,bug1,TP,TP,x,https://github.com/mooman219/fontdue/issues/142
+fontdue-0.8.0,platform::float::get_bitmap::get_bitmap,bug3,FP,FP,-,
+tinystr-0.7.5,ascii::TinyAsciiStr::<N>::as_bytes,bug2,FP,FP,-,
+pprof-0.13.0,"<collector::TempFdArrayIterator<'a, T> as std::iter::Iterator>::next",bug1,TP,TP,x,https://github.com/tikv/pprof-rs/issues/232
+pprof-0.13.0,addr_validate::validate,bug2,TP,TP,x,https://github.com/tikv/pprof-rs/issues/232
+rendy-core-0.5.1,casts::cast_vec,bug2,TP,TP,x,https://github.com/amethyst/rendy/issues/328
+rendy-core-0.5.1,casts::cast_slice,bug2,TP,TP,x,https://github.com/amethyst/rendy/issues/328
+rendy-util-0.4.1,casts::cast_slice,bug2,TP,TP,x,same code 
+rendy-util-0.4.1,casts::cast_vec,bug2,TP,TP,x,same code 
+sciter-rs-0.5.58,video::AssetPtr::<T>::get,bug1,TP,TP,x,https://github.com/sciter-sdk/rust-sciter/issues/143
+sciter-rs-0.5.58,capi::schandler::NativeHandler::get_data,bug2,FP,FP,-,
+sciter-rs-0.5.58,capi::schandler::NativeHandler::get_data,bug3,FP,FP,-,
+cortex-m-0.7.7,itm::write_all,bug1,FP,FP,-,
+cortex-m-0.7.7,vect_active,bug2,TP,TP,x,https://github.com/rust-embedded/cortex-m/issues/485
+rosrust-0.9.11,encode_variable_primitive_slice,bug2,TP,TP,x,https://github.com/adnanademovic/rosrust/issues/207
+rosrust-0.9.11,decode_variable_primitive_vec,bug2,TP,TP,x,https://github.com/adnanademovic/rosrust/issues/207
+rosrust-0.9.11,<util::killable_channel::Receiver<T> as std::iter::Iterator>::next,bug2,TP,TP,x,
+rosrust-0.9.11,decode_variable_primitive_vec,bug3,TP,TP,x,https://github.com/adnanademovic/rosrust/issues/207
+rafx-base-0.0.15,memory::any_as_bytes,bug2,TP,TP,x,https://github.com/aclysma/rafx/issues/255
+rafx-base-0.0.15,memory::any_slice_as_bytes,bug2,TP,TP,x,https://github.com/aclysma/rafx/issues/256
+xous-0.9.50,definitions::MemoryRange::as_slice,bug1,TP,TP,x,https://github.com/betrusted-io/xous-core/issues/410
+xous-0.9.50,definitions::MemoryRange::as_slice_mut,bug1,TP,TP,x,https://github.com/betrusted-io/xous-core/issues/411
+xous-0.9.50,definitions::MemoryRange::as_slice,bug3,TP -> x,TP,x,https://github.com/betrusted-io/xous-core/issues/412
+xous-0.9.50,definitions::MemoryRange::as_slice_mut,bug3,TP -> x,TP,x,https://github.com/betrusted-io/xous-core/issues/413
+simdutf8-0.1.4,basic::from_utf8,bug3,FP,FP,-,
+simdutf8-0.1.4,basic::from_utf8_mut,bug3,FP,FP,-,
+simdutf8-0.1.4,compat::from_utf8,bug3,FP,FP,-,
+simdutf8-0.1.4,compat::from_utf8_mut,bug3,FP,FP,-,
+termwiz-0.22.0,cell::TeenyString::width,bug1,FP,FP,-,
+termwiz-0.22.0,cell::TeenyString::as_bytes,bug1,FP,FP,-,
+allsorts-0.14.1,big5::big5_to_unicode,bug3,FP,FP,-,
+encoding_rs-0.8.32,mem::decode_latin1,bug3,FP,FP,-,
+utf-8-0.7.6,Incomplete::try_complete,bug3,FP,FP,-,
+rbs-4.5.13,value::ext::se::to_value,bug2,FP,FP,-,
+aya-0.12.0,maps::ring_buf::ProducerData::next::read_item,bug1,FP,FP,-,
+askama_parser-0.2.1,_parsed::Parsed::new,bug3,FP,FP,-,
+gfx-auxil-0.10.0,read_spirv,bug3,FP,FP,-,
+failure-0.1.8,error::error_impl::ErrorImpl::downcast,bug2,FP,x,-,
+21 TPs Reported within 3 months are omitted due to disclosure policies.,,,,,6 v,
+,,,,,,
+,,,,,,
+,,,69 TPs / 30 FPs,71 TPs / 23 FPs,,
