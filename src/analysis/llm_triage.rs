@@ -5,7 +5,7 @@ use serde_json::json;
 pub fn get_snippet(tcx: TyCtxt<'_>, def_id: DefId) -> String {
     if let Some(local_def_id) = def_id.as_local() {
         let hir_id = tcx.hir().local_def_id_to_hir_id(local_def_id);
-        let span = tcx.hir().span(hir_id);
+        let span = tcx.hir().span_with_body(hir_id);
         if let Ok(snippet) = tcx.sess.source_map().span_to_snippet(span) {
             return snippet;
         }
