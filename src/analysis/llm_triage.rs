@@ -47,6 +47,7 @@ pub fn evaluate_bug(
 
     println!("==================================================");
     println!("[LLM Triage] Requesting evaluation for {}...", bug_type);
+    println!("[LLM Prompt]\n{}\n--------------------------------------------------", prompt);
     
     let body = json!({
         "model": "qwen2.5-coder:7b",
