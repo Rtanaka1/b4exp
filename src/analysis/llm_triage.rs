@@ -46,7 +46,7 @@ pub fn evaluate_bug(
         【コードの文脈】\n\
         {}\n\
         \n\
-        推論は「どの行でどのようなチェックが行われているか」を具体的に挙げながら簡潔にまとめ、最終的な結論として「True Bug」または「False Positive」のいずれかの文字列を必ず含めて回答してください。",
+        必ず回答の最初の1行目に【結論: True Bug】または【結論: False Positive】と明記してください。その後の行で「どの行でどのようなチェックが行われているか」を具体的に挙げながら、簡潔に理由を説明してください。",
         bug_type, code_context
     );
 
@@ -59,7 +59,7 @@ pub fn evaluate_bug(
         "prompt": prompt,
         "stream": false,
         "options": {
-            "num_predict": 300
+            "num_predict": 500
         }
     });
 
