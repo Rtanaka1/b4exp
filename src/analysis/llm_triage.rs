@@ -62,7 +62,8 @@ pub fn evaluate_bug(
         "prompt": prompt,
         "stream": false,
         "options": {
-            "num_predict": 500
+            "num_predict": 500,
+            "temperature": 0.0
         }
     });
 
